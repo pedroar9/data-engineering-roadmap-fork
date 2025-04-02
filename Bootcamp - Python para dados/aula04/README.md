@@ -112,9 +112,9 @@ https://www.youtube.com/watch?v=0LB3FSfjvao
 ### Listas
 https://www.youtube.com/watch?v=N1hTsbW50eM
 
+### Dicionários
 https://www.youtube.com/watch?v=ZWj8o692qGY
 
-### Dicionários
 ### Exercícios de Listas e Dicionários
 
 1. Crie uma lista com os números de 1 a 10 e use um loop para imprimir cada número elevado ao quadrado.
