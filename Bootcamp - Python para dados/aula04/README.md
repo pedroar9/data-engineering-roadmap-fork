@@ -1,6 +1,6 @@
 # Aula 04 | Type hint, Tipos complexos (Dicionários vs DataFrames Vs Tabelas Vs Excel) e Funções
 
-Bem-vindos à quarta aula de Python e SQL focada em Engenharia de Dados. Nesta aula você vai aprender sobre: Type Hint, Listas e Dicionários e Funções. Esses elementos são essenciais para a manipulação de dados, ajudando na organização, interpretação e análise eficiente das informações. 
+Bem-vindos à quarta aula de Python e SQL focada em Engenharia de Dados. Nesta aula você vai aprender sobre: Type Hint, Listas e Dicionários e Funções. Esses elementos são essenciais para a manipulação de dados, ajudando na organização, interpretação e análise eficiente das informações.
 
 ![imagem_01](./pic/1.jpg)
 
@@ -21,6 +21,7 @@ O uso de Type Hint ajuda a tornar o código mais legível e seguro, especificand
 Para demonstrar como utilizar Type Hints com tipos primitivos em Python, vamos criar quatro variáveis representando os tipos mais comuns: int para números inteiros, float para números de ponto flutuante, str para strings (cadeias de caracteres) e bool para valores booleanos. Type Hints são usados para indicar o tipo de uma variável no momento da sua declaração, melhorando a legibilidade do código e facilitando a detecção de erros.
 
 Sem Type Hint
+
 ```python
 idade = 30
 altura = 1.75
@@ -29,6 +30,7 @@ is_estudante = True
 ```
 
 Com Type Hint
+
 ```python
 idade: int = 30
 altura: float = 1.75
@@ -43,13 +45,11 @@ Na Python, a tipagem de funções é facilitada pelo uso de "Type Hints" (Dicas 
 ### Tipagem Fraca vs. Forte
 
 * **Tipagem Forte**: Em linguagens com tipagem forte, uma vez que uma variável é atribuída a um tipo, não pode ser automaticamente tratada como outro tipo sem uma conversão explícita. Python é um exemplo de linguagem com tipagem forte. Isso significa que operações que misturam tipos incompatíveis (como adicionar um número a uma string) resultarão em erro.
-    
 * **Tipagem Fraca**: Linguagens com tipagem fraca permitem maior flexibilidade nas operações entre diferentes tipos, fazendo conversões de tipo implícitas. JavaScript é um exemplo clássico, onde você pode adicionar números a strings sem erros, resultando em uma concatenação de texto.
-    
+
 ### Tipagem Estática vs. Dinâmica
 
 * **Tipagem Estática**: Linguagens de tipagem estática, como Java e C++, exigem que o tipo de cada variável seja declarado explicitamente no momento da compilação. Isso ajuda a detectar erros de tipo antes da execução do programa, aumentando a segurança do tipo e potencialmente melhorando o desempenho.
-    
 * **Tipagem Dinâmica**: Python é um exemplo de linguagem com tipagem dinâmica, onde os tipos são inferidos em tempo de execução e não precisam ser declarados explicitamente. Isso oferece flexibilidade e rapidez no desenvolvimento, mas pode aumentar o risco de erros de tipo que só serão detectados em tempo de execução.
 
 Exercício será tipar o desafio da aula 03
@@ -106,6 +106,15 @@ print(f"{nome}, seu salário é R${salario:.2f} e seu bônus final é R${bonus_r
 
 Listas e dicionários são estruturas de dados versáteis que permitem armazenar e manipular coleções de dados de forma eficiente. Na engenharia de dados, essas estruturas são fundamentais para organizar dados coletados de diversas fontes, facilitando operações como filtragem, busca, agregação e transformação de dados.
 
+### Tuplas
+https://www.youtube.com/watch?v=0LB3FSfjvao
+
+### Listas
+https://www.youtube.com/watch?v=N1hTsbW50eM
+
+https://www.youtube.com/watch?v=ZWj8o692qGY
+
+### Dicionários
 ### Exercícios de Listas e Dicionários
 
 1. Crie uma lista com os números de 1 a 10 e use um loop para imprimir cada número elevado ao quadrado.
@@ -320,7 +329,7 @@ dados = []
 with open(caminho_arquivo, mode='r', encoding='utf-8') as arquivo:
     # Cria um objeto leitor de CSV
     leitor_csv = csv.DictReader(arquivo)
-    
+  
     # Itera sobre as linhas do arquivo CSV
     for linha in leitor_csv:
         # Adiciona cada linha (um dicionário) à lista de dados
@@ -400,13 +409,9 @@ O padrão de nomeação de funções em Python segue convenções que são ampla
 ### Padrões de Nomes de Funções
 
 * **Nomes Claros e Descritivos**: O nome de uma função deve ser descritivo o suficiente para indicar sua finalidade ou o que ela faz. Por exemplo, `calcular_area_circulo` é mais descritivo do que simplesmente `area`.
-    
 * **Letras Minúsculas com Sublinhados**: Funções em Python devem ser nomeadas usando letras minúsculas, com palavras separadas por sublinhados para melhorar a legibilidade. Este estilo é algumas vezes referido como snake_case. Por exemplo, `carregar_dados_usuario` é um bom exemplo.
-    
 * **Evitar Nomes Genéricos**: Nomes como `processo`, `executar`, ou `fazer_algo` são muito genéricos e não fornecem informações suficientes sobre o que a função faz. Prefira nomes que ofereçam um nível adequado de detalhe.
-    
 * **Evitar Abreviações Obscuras**: Embora abreviações possam encurtar o nome de uma função, elas podem tornar o código menos acessível para outros desenvolvedores. Por exemplo, `calc_media_notas` é preferível a `cmn`.
-    
 * **Prefixos com Verbo**: Muitas vezes, funções realizam ações, então é útil iniciar o nome da função com um verbo que descreve essa ação, como `obter_`, `calcular_`, `processar_`, `validar_` ou `limpar_`.
 
 Na Python, a tipagem de funções é facilitada pelo uso de "Type Hints" (Dicas de Tipo), uma característica introduzida no Python 3.5 através do PEP 484. Os Type Hints permitem aos desenvolvedores especificar os tipos de dados esperados para os parâmetros de uma função e o tipo de dado que a função deve retornar. Embora essas dicas de tipo não sejam estritamente aplicadas em tempo de execução, elas são extremamente úteis para ferramentas de análise estática de código, melhorando a legibilidade do código e ajudando na detecção precoce de erros.
@@ -429,11 +434,9 @@ def saudacao(nome: str, idade: int = 30) -> str:
     return f"Olá, {nome}, você tem {idade} anos."
 ```
 
-
 ![imagem_03](./pic/3.jpg)
 
 Refatorar nosso código usando Dicionário, Type Hint e Funcões.
-
 
 ![imagem_04](./pic/4.jpg)
 
