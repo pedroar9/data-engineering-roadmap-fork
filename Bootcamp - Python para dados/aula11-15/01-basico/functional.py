@@ -29,5 +29,5 @@ c = a
 a = b
 b = c
 
-#
+# Exibindo os valores após a troca
 print(a + " e " + b)
