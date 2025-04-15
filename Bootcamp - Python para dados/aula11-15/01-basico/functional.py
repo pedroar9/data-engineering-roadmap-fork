@@ -18,3 +18,16 @@ estado_filtrado = 'SP'  # estado que você quer filtrar
 df_filtrado = carregar_csv_e_filtrar(arquivo_csv, estado_filtrado)
 
 print(df_filtrado)
+
+# Troca de variáveis
+# Exemplo de troca de variáveis
+# Inicializando as variáveis    
+
+a = "Sol"
+b = "Lua"
+c = a
+a = b
+b = c
+
+#
+print(a + " e " + b)
